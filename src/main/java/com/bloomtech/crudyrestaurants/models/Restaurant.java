@@ -11,13 +11,11 @@ import java.util.Set;
 /**
  * The entity allowing interaction with the restaurants table.
  */
-
 public class Restaurant
 {
     /**
      * The primary key number (long) of the restaurants table.
      */
-
     private long restaurantid;
 
     /**
@@ -52,7 +50,7 @@ public class Restaurant
      */
     private int seatcapacity;
 
-    private boolean hasvalueforseatcapacity = false;
+    public boolean hasvalueforseatcapacity = false;
 
     /**
      * Creates a join table joining Restaurants and Payments in a Many-To-Many relations.
@@ -62,7 +60,6 @@ public class Restaurant
     @JoinTable(name = "restaurantpayments",
         joinColumns = @JoinColumn(name = "restaurantid"),
         inverseJoinColumns = @JoinColumn(name = "paymentid"))
-
     Set<Payment> payments = new HashSet<>();
 
     /**
@@ -72,7 +69,6 @@ public class Restaurant
     @OneToMany(mappedBy = "restaurant",
         cascade = CascadeType.ALL,
         orphanRemoval = true)
-
     private List<MenuItem> menuItems = new ArrayList<>();
 
     /**

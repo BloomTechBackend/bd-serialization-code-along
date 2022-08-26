@@ -7,13 +7,13 @@ import javax.persistence.*;
 /**
  * The entity allowing interaction with the menus table.
  */
-
 public class MenuItem
 {
     /**
      * The primary key number (long) of the menus table.
      */
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long menuid;
 
     /**
