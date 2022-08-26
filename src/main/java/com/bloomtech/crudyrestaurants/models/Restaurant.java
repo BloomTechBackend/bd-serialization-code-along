@@ -1,7 +1,5 @@
 package com.bloomtech.crudyrestaurants.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -11,13 +9,11 @@ import java.util.Set;
 /**
  * The entity allowing interaction with the restaurants table.
  */
-
 public class Restaurant
 {
     /**
      * The primary key number (long) of the restaurants table.
      */
-
     private long restaurantid;
 
     /**
@@ -52,7 +48,7 @@ public class Restaurant
      */
     private int seatcapacity;
 
-    public boolean hasvalueforseatcapcity = false;
+    private boolean hasvalueforseatcapacity = false;
 
     /**
      * Creates a join table joining Restaurants and Payments in a Many-To-Many relations.
@@ -72,7 +68,7 @@ public class Restaurant
         cascade = CascadeType.ALL,
         orphanRemoval = true)
 
-    private List<Menu> menus = new ArrayList<>();
+    private List<MenuItem> menuItems = new ArrayList<>();
 
     /**
      * Default constructor used primarily by the JPA.
@@ -248,7 +244,7 @@ public class Restaurant
     public void setSeatcapacity(int seatcapacity)
     {
         this.seatcapacity = seatcapacity;
-        hasvalueforseatcapcity = true;
+        hasvalueforseatcapacity = true;
     }
 
     /**
@@ -276,18 +272,18 @@ public class Restaurant
      *
      * @return A List of menus associated with the current restaurant.
      */
-    public List<Menu> getMenus()
+    public List<MenuItem> getMenus()
     {
-        return menus;
+        return menuItems;
     }
 
     /**
      * Setter for menus.
      *
-     * @param menus A new list of menus for this restaurant.
+     * @param menuItems A new list of menus for this restaurant.
      */
-    public void setMenus(List<Menu> menus)
+    public void setMenus(List<MenuItem> menuItems)
     {
-        this.menus = menus;
+        this.menuItems = menuItems;
     }
 }

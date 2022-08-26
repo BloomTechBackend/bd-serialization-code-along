@@ -7,8 +7,7 @@ import javax.persistence.*;
 /**
  * The entity allowing interaction with the menus table.
  */
-
-public class Menu
+public class MenuItem
 {
     /**
      * The primary key number (long) of the menus table.
@@ -39,7 +38,7 @@ public class Menu
     /**
      * Default constructor used primarily by the JPA.
      */
-    public Menu()
+    public MenuItem()
     {
     }
 
@@ -52,7 +51,7 @@ public class Menu
      * @param price      The cost (Double) of the menu item.
      * @param restaurant The full restaurant object to which the menu item is assigned.
      */
-    public Menu(
+    public MenuItem(
         String dish,
         double price,
         Restaurant restaurant)

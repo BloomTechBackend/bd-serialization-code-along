@@ -5,7 +5,7 @@ DELETE
 FROM payments;
 
 DELETE
-FROM menus;
+FROM menuItems;
 
 DELETE
 FROM restaurants;
@@ -28,7 +28,7 @@ INSERT INTO restaurantpayments
            (3, 2),
            (3, 3);
 
-INSERT INTO menus (menuid, dish, price, restaurantid)
+INSERT INTO menuItems (menuid, dish, price, restaurantid)
     VALUES (4, 'Mac and Cheese', 6.95, 1),
            (5, 'Lasagna', 8.50, 1),
            (6, 'Meatloaf', 7.77, 1),
