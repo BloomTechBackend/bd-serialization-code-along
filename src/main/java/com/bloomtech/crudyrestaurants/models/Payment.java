@@ -9,11 +9,13 @@ import java.util.Set;
 /**
  * The entity allowing interaction with the payments table.
  */
+
 public class Payment
 {
     /**
      * The primary key number (long) of the payments table.
      */
+
     private long paymentid;
 
     /**

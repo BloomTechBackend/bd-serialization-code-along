@@ -47,15 +47,15 @@ public class SeedData
         r1.getPayments().add(payType1);
         r1.getPayments().add(payType2);
         r1.getPayments().add(payType3);
-        r1.getMenus()
+        r1.getMenuItems()
             .add(new MenuItem("Mac and Cheese", 6.95, r1));
-        r1.getMenus()
+        r1.getMenuItems()
             .add(new MenuItem("Lasagna", 8.50, r1));
-        r1.getMenus()
+        r1.getMenuItems()
             .add(new MenuItem("Meatloaf", 7.77, r1));
-        r1.getMenus()
+        r1.getMenuItems()
             .add(new MenuItem("Tacos", 8.49, r1));
-        r1.getMenus()
+        r1.getMenuItems()
             .add(new MenuItem("Chef Salad", 12.50, r1));
 
         restaurantrepos.save(r1);
@@ -65,9 +65,9 @@ public class SeedData
             "321 Uptown Drive",
             "Town", "ST", "555-555-5555", 50);
         r2.getPayments().add(payType2);
-        r2.getMenus()
+        r2.getMenuItems()
             .add(new MenuItem("Tacos", 10.49, r2));
-        r2.getMenus()
+        r2.getMenuItems()
             .add(new MenuItem("Barbacoa", 12.75, r2));
 
         restaurantrepos.save(r2);
@@ -78,7 +78,7 @@ public class SeedData
             "Village", "ST", "555-123-1555", 25);
         r3.getPayments().add(payType1);
         r3.getPayments().add(payType3);
-        r3.getMenus()
+        r3.getMenuItems()
             .add(new MenuItem("Pizza", 15.15, r3));
 
         restaurantrepos.save(r3);

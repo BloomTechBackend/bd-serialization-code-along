@@ -1,5 +1,7 @@
 package com.bloomtech.crudyrestaurants.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -9,11 +11,13 @@ import java.util.Set;
 /**
  * The entity allowing interaction with the restaurants table.
  */
+
 public class Restaurant
 {
     /**
      * The primary key number (long) of the restaurants table.
      */
+
     private long restaurantid;
 
     /**
@@ -58,6 +62,7 @@ public class Restaurant
     @JoinTable(name = "restaurantpayments",
         joinColumns = @JoinColumn(name = "restaurantid"),
         inverseJoinColumns = @JoinColumn(name = "paymentid"))
+
     Set<Payment> payments = new HashSet<>();
 
     /**
@@ -272,7 +277,7 @@ public class Restaurant
      *
      * @return A List of menus associated with the current restaurant.
      */
-    public List<MenuItem> getMenus()
+    public List<MenuItem> getMenuItems()
     {
         return menuItems;
     }
@@ -282,7 +287,7 @@ public class Restaurant
      *
      * @param menuItems A new list of menus for this restaurant.
      */
-    public void setMenus(List<MenuItem> menuItems)
+    public void setMenuItems(List<MenuItem> menuItems)
     {
         this.menuItems = menuItems;
     }
